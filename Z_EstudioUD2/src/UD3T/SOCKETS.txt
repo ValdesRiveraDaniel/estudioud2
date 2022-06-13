@@ -1,0 +1,76 @@
+SOCKETS TIPOS:
+########################################################################
+
+SOCKET -> representa el extremo de un canal de comunicación establecido entre un emisor y un receptor. (Un enchufe).
+       -> Para establecer una comunicación entre dos aplicaciones, ambas deben crear sus respectivos sockets y conectarlos entre sí.
+
+Sockets Stream:
+###############
+
+- orientados a conexión y cuando operan sobre IP, emplean TCP.
+- los mensajes se envían y llegan a su destino y además, aseguran el orden de entrega correcto.
+- Un socket stream se utiliza para comunicarse siempre con el mismo receptor, 
+	manteniendo el canal de comunicación abierto entre ambas partes hasta quese termina la conexión.
+
+			Proceso Cliente:			Proceso Servidor:
+			#################			#################
+			1- Crear el Socket. 			1- Crear el Socket.
+			2- Conexion del Socket (Connect).	2- Asignación de dirección y puerto (bind).
+			3- Envío y recepción de mensajes.	3- Escucha (listen).
+			4- Cierre de la conexión (close).	4- Aceptación de conexiones (accept) -> Esta operación implica la creación de un nuevo socket, que se usa para comunicarse con el cliente que se ha conectado.
+								5- Envío y recepción de mensajes.
+								6- Cierre de la conexión (close). 
+
+Sockets Datagram:
+#################
+
+- Son no orientados a conexión y cuando operan sobre IP, emplean UDP.
+- Pueden utilizarse para enviar mensajes a multitud de receptores, ya que usan un canal temporal para cada envío.
+- No son fiables ni aseguran el orden de entrega correcto.
+- Cuando se usan sockets datagram no existe diferencia entre proceso servidor y proceso cliente.
+
+			Pasos para enviar mensajes:
+			###########################
+			1- Creación del socket (similar al socket stream).
+			2- Asignación de dirección y puerto (bind)   -> solo necesario para recivir mensajes.
+			3- Envío y/o recepción de mensajes.
+			4- Cierre del socket.
+
+
+
+SOCKETS PROGRAMACION:
+########################################################################
+
+Clase Socket: -> Para la creación de sockets stream cliente. 
+#############
+
+- Metodos de la clase		-> https://docs.oracle.com/javase/7/docs/api/java/net/Socket.html
+- ClienteSocketStream Clase 	-> https://github.com/PedroCamacho/Distribuido/blob/master/src/tcp/teoria/ClienteSocketStream.java
+
+
+Clase ServerSocket: -> para la creación de sockets stream servidor 
+###################
+
+- Metodos de la clase 	-> https://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html
+- ServidorSocketStream 	-> https://github.com/PedroCamacho/Distribuido/blob/master/src/tcp/teoria/ServidorSocketStream.java
+
+
+Clase DatagramSocket: -> para la creación de sockets datagram. 
+#####################	 
+
+- Metodos de la clase 	-> https://docs.oracle.com/javase/7/docs/api/java/net/DatagramSocket.html
+
+
+ECO TCP:
+########
+
+- https://github.com/PedroCamacho/Distribuido/tree/master/src/tcp/ejemplo
+
+
+ECO UDP:
+########
+
+- https://github.com/PedroCamacho/Distribuido/tree/master/src/udp/ejemplo
+
+
+

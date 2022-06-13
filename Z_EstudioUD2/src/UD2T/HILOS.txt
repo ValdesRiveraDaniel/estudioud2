@@ -1,0 +1,57 @@
+CREAR HILO DE EJECUCION:
+########################
+
+- Crear clase que implemente la interfaz Runnable (Metodo run()).
+- Escribir el codigo dentro del metodo run().
+- Instanciar la clase creada y almacenar la intancia en variable tipo Runnable.
+- Crear intancia de la clase Thread pasando como parametro al constructor de Thread el objeto Runnable anterior.
+- Poner en ejecucion el hilo con el metodo start();
+
+
+INTERRUCION DE HILOS: 
+#####################
+
+- interrupt()		-> solicitud de detencion del hilo.
+- interrupted() 	-> boolean 				-> test if interrupted
+- isInterrupted() 	-> boolean				-> test if interrupted
+- stop() 		-> deprecated
+- currentThread() 	-> devuelve una referencia del hilo en ejecucion actual.
+- getName()		-> Devuelve el nombre del hilo
+
+
+SINCRONIZACION DE HILOS:
+######################## 
+
+- join() -> espera a que ese hilo muera (para que no empiece con el siguiente), [ Thread.join() ]  .
+
+	-> La ejecucion de un hilo puede suspenderse hasta que finalice si ejecucion otro hilo.
+
+SEMAFOROS: -- (Semaphore)
+##########
+
+En las clases que º extiendan de Thread ->
+
+Semaphore SemaforoSuma;
+
+public constructorX(Semaphore Semaforo) {
+	this.Semaforo = Semaforo;
+}
+
+dentro del RUN() ->
+
+- semaforo.acquire();  	-> Acquires a permit from this semaphore, blocking until one is available.
+- semaforo.release();  	-> Releases a permit, returning it to the semaphore.
+
+
+MONITORES:
+##########
+
+- Crear dos  metodos() sincronizados dentro de la clase publica (o un bloque sincronizado dentro de un metodo)
+									->	synchronized(this){}
+
+- wait()  -> detiene la ejecucion del hilo de un objeto (llamar a wait() despierta a todos los threads que estén esperando)   -> esperan al notify para realizar una accion.    
+
+- notify() -> vuelve a ejecutar el hilo de un objeto (despierta 1 thread) -> notifica a los hilos en estado wait() de que pueden ejercutarse.
+
+- notifyAll()
+ 

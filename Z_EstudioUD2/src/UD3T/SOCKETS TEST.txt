@@ -1,0 +1,33 @@
+1- cuales afirmaciones son ciertas sobre el protocolo TCP (Varias respuestas)
+	- Se situa en el nivel de transporte de la pila de protocolos ip.
+	- Garantiza que los datos no se pierden y lleguen en el mismo orden en que han sido enviados, siempre y cuando la comunicacion sea posible.
+
+2- ¿Que clase debemos usar para crear Socket Stream Cliente?
+	- Socket.
+
+3- ¿Cual es el elemento fundamental de la comunicacion entre aplicaciones?
+	- Todas son fundamentales.
+
+4- ¿Cual es la funcion principal del nivel de transporte?
+	- Crear el canal de comunicacion, descomponer el mensaje en paquetes y gestionar la transmision entre emisor y receptor.
+
+5- ¿Cual es la funcion principal del nivel de internet?
+	- Dirigir los paquetes por la red y hacer que estos lleguen a su destino.
+
+6- ¿Cuando el metodo accept() de un serverSocket termina, ¿que devuelve?
+	- un objeto de la clase Socket, conectado al socket cliente
+
+7- ¿Cual es el modelo de comunicaciones mas usado en la actualidad?
+	- cliente/servidor
+
+8- ¿Que afirmaciones son ciertas sobre los mecanismos de funcionamiento de los sockets? (Varias respuestas)
+	- Existen dos clases de sockets streams: sockets cliente y servidor.
+	- En los sockets datagram, no siempre es necesario realizar la operacion bind antes de poder usarlos.
+	- La operacion accept()
+
+9- ¿Cual der las siguientes no es una caracteristica Fundamental de todos los sistemas distribuidos?
+	- Los elementos que lo forman siguien el modelo de comunicacion cliente/servidor
+
+10- ¿que roles puede desempeñar una red peer to peer simultaneamente?
+	- Dos: cliente y servidor
+

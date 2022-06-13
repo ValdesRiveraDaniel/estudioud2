@@ -1,0 +1,54 @@
+1 - La condicion de un monitor se implementa con
+	- while
+
+2 - Cuando varios hilos acceder a datos compartidos, y el resultado de la ejecución depende del orden concreto en que se accede a los datos compartidos, se dice que...
+	- Condicion de carrera
+
+3 - Cualquier solución al problema de la sección critica debe cumplir con las condiciones de:
+		- Exclusión mutua, progreso y espera limitada.
+
+4 - Dado el siguiente fragmento de código, y suponiendo que el objeto Semaphore S tiene como valor inicial 2:
+S.release(S);
+Funcion();
+S.acquire(S);
+¿Cuántos procesos pueden ejecutar al mismo tiempo la tarea Funcion?
+	- Ninguna respuesta es correcta, depende de la ejecucion.
+
+5 - que afirmacion es falsa sobre los semaforos:
+	- No se pueden utilizar para garantizar el orden de ejecucion entre procesos
+
+6 - Los monitores proporcionan exclusion mutua.
+	- Cierto, y de forma sencilla 
+
+7 - Si se usa un bloque sincronizado para lograr la sincronización de procesos..
+	- wait y notify se deben utilizar dentro de un mismo objeto.
+
+8 - ¿Pueden los hilos compartir el Contador de Programa?
+	- No, cada uno tiene el suyo propio
+
+9 - indica cual de las siguientes afirmaciones sobre los monitores es FALSA:
+	- pueden ser binarios y contadires
+
+10 - Si se usa un bloque sincronizado para lograr la sincronización de procesos:
+	- Las operaciones wait y notify se utilizan dentro de un mismo objeto.
+
+11 - Señala la diferencia entre hilo y proceso.
+	- los hilos pueden compartir recursos.
+
+12 - utilizar prioridades para programar en java es:
+	- No es recomendable
+
+13 - que amirmacion sobre los semaforos es falsa:
+	- No se pueden usar para garantizar el orden de ejecucion.
+
+16 - La ejecucion de un hilo puede suspenderse hasta que finalice si ejecucion otro hilo.
+	- Con el metodo join  
+
+17 - Dado el siguiente fragmento de código, suponiendo que el objeto Semaphore "sem" tiene como valor inicial 2: "sem.acquire();" qué sucedera?
+	- tras hacer la operacion (acquire), el proceso continuara adelante sin bloquearse.
+
+19 - Una condicion de carrera:
+	- 1 y 2 son correctas
+
+20 - ¿Que sucede cuando un metodo es interrumpido?
+	- ninguna es correcta 
